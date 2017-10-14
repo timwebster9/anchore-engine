@@ -51,7 +51,7 @@ if [ "${BUILDMODE}" == "dev" ]; then
     rsync -azP /${ANCHORESRCHOME}/anchore-cli/ /tmp/anchore-engine-build/anchore-cli/
     rsync -azP /${ANCHORESRCHOME}/anchore/ /tmp/anchore-engine-build/anchore/
 else
-    git clone git@github.com:anchore/anchore-engine.git
+    git clone git@github.com:timwebster9/anchore-engine.git
 fi
 
 

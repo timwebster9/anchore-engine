@@ -17,12 +17,8 @@ def get_image_manifest_skopeo(url, registry, repo, tag, user=None, pw=None, veri
         else:
             credstr = ""
 
-        if verify:
-            tlsverifystr = "--tls-verify=true"
-        else:
-            tlsverifystr = "--tls-verify=false"
-            
-
+        tlsverifystr = "--tls-verify=false"
+        
         try:
             cmdstr = "skopeo inspect --raw "+tlsverifystr+" "+credstr+" docker://"+registry+"/"+repo+":"+tag
             cmd = cmdstr.split()
